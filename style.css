@@ -21,6 +21,14 @@ color: #fff;
 cursor: pointer;
 border: 0;
 }
+
+.section-tittle{
+    font-size:2.8rem;
+    font-weight: 700;
+    color: #131313;
+}
+
+
 /* header styles */
 header{
     background: rgba(255, 144, 14, 0.10);
@@ -31,11 +39,7 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
-.nav-tittle{
-    font-size:2.8rem;
-    font-weight: 700;
-    color: #131313;
-}
+
 nav > ul {
     display: flex;
 }
@@ -96,8 +100,86 @@ nav li a{
         color: #FF900E;
          font-weight: 700;
         }
+        /* features style */
+.features{
+    margin-top: 130px;
+    display: flex;
+    gap: 100px;
+}
+.features .section-tittle{
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+.feature-content .card{
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+}
 
+.features-img img{
+  
+    height: 90%;
+    margin-left: 90px;
+}
+.ten-years-badge{
+    border-radius: 8px;
+background: #FF900E;
+color: #FFF;
+width: 342px;
+padding: 40px;
+text-align: center;
+position: relative;
+bottom: 100px;
+}
+.ten-years-badge h2{
+    font-size: 4rem;
+    margin: 0;
+}
+.ten-years-badge p{
+    font-size: 1.5rem;
+}
 
+/* facts section */
+.facts-card-container{
+    display: flex;
+    justify-content: space-around;
+}
+.facts-card-container .card{
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding:  30px;
+}
+.facts-card-container.card-tittle{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 5px;
+   
+}
+
+.facts-card-container .stats{
+    font-size: 2.8rem;
+    color: #424242;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ /* sponsors style */
+ .Sponsors{
+    text-align: center;
+ }
+.sponsors-img-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:20px;
+}
+.sponsors-img-container img{
+    width: 165px;
+}
 
         /* responsive media queries */
     /* moblie devices */
@@ -106,12 +188,31 @@ nav li a{
             padding: 20px;
         }
         nav,
-        .teams-container
+        .teams-container,
+        .features,
+        .facts-card-container,
+        .sponsors-img-container
         {
             flex-direction: column;
         }
+        /* .features-img img{
+            width: 100%;
+            margin-left: 0;
+        } */
+
+        /* .ten-years-badge{
+            position: static;
+            max-width: 300px;
+        } */
         .teams-img-container{
             grid-template-columns: 1fr;
+        }
+        .teams-content, .facts-card-container{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .facts-card-container{
+            gap: 20px;
         }
     }
 
@@ -120,7 +221,10 @@ nav li a{
         header{
             padding: 50px;
         }
-        nav, .teams-container{
+        nav, 
+        .features,
+        .teams-container,
+        .sponsors-img-container{
             flex-direction: column;
         }
     }
